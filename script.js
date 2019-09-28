@@ -5,12 +5,15 @@ function multiply(a, b) {
   }
   for (var i = 0; i < a.length; i++) {
     for (var j = 0; j < b.length; j++) {
-      product[product.length - 1 - i - j] += parseInt(a[a.length - 1 - i]) * parseInt(b[b.length - 1 - j]);
+      product[product.length - 1 - i - j] +=
+        parseInt(a[a.length - 1 - i]) * parseInt(b[b.length - 1 - j]);
     }
   }
   for (var l = product.length - 1; l > -1; l--) {
     if (product[l].toString().length > 1) {
-      product[l - 1] += parseInt(product[l].toString().slice(0, product[l].toString().length - 1));
+      product[l - 1] += parseInt(
+        product[l].toString().slice(0, product[l].toString().length - 1)
+      );
       product[l] = product[l].toString();
       product[l] = product[l][product[l].length - 1];
     }
@@ -22,3 +25,7 @@ function multiply(a, b) {
     return product.replace(/\b0+/g, "");
   }
 }
+
+// examples:
+// multiply("52", "100"); - returns "5200"
+// multiply("358534858986", "858585883946"); - returns "307832968827949271238756"
