@@ -29,3 +29,6 @@ function multiply(a, b) {
 // examples:
 // multiply("52", "100"); - returns "5200"
 // multiply("358534858986", "858585883946"); - returns "307832968827949271238756"
+
+// note:
+// this is for whole, positive numbers
