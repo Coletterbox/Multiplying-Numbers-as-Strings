@@ -1,3 +1,10 @@
+// note:
+// a and b are whole, positive numbers as strings
+
+// examples:
+// multiply("52", "100"); - returns "5200"
+// multiply("358534858986", "858585883946"); - returns "307832968827949271238756"
+
 function multiply(a, b) {
   var product = [...new Array(a.length + b.length)];
   for (var k = 0; k < product.length; k++) {
@@ -25,10 +32,3 @@ function multiply(a, b) {
     return product.replace(/\b0+/g, "");
   }
 }
-
-// examples:
-// multiply("52", "100"); - returns "5200"
-// multiply("358534858986", "858585883946"); - returns "307832968827949271238756"
-
-// note:
-// this is for whole, positive numbers
